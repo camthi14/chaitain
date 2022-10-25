@@ -1,0 +1,44 @@
+.btn-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 45px;
+}
+.btn-signup {
+    margin: 20px 0 30px;
+    border: 1px solid $title-color;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    @include font($font, 2rem, 700, none);
+    @include hover($primary-color, $text-color );
+
+    &:hover {
+        @include hover($title-color, $text-color );
+    }
+
+}
+.btn-signin {
+    margin-bottom: 30px;
+    border: 1px solid $title-color;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    @include font($font, 2rem, 700, none);
+    @include hover($title-color, $text-color );
+
+    &:hover {
+        @include hover($primary-color, $text-color );
+    }
+
+}
+@include respond(phone) {
+    .btn-submit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 45px;
+    }
+}

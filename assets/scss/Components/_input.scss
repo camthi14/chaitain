@@ -1,0 +1,40 @@
+.form-control {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    @include font($font, 1.6rem, 300, 1.6rem);
+    margin-bottom: 20px;
+    border: none;
+    height: 50px;
+
+    .btn_input {
+        background: transparent none repeat scroll 0 0;
+            border: 1px solid #444;
+            color: #919090;
+            width: 100%;
+            height: 100%;
+            padding: 2px 60px 2px 30px;
+            outline: none;
+
+
+        &::placeholder {
+            color: $title-color;
+            @include font($font, 1.6rem, 300, 1.6rem);
+        }
+    }
+    .btn_icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: medium none;
+        cursor: pointer;
+        padding: 0;
+        width: 50px;
+        height: 100%;
+        background-color: $title-color;
+        color: $text-color;
+        i{
+            font-size: 2.4rem;
+        }
+    }
+}

@@ -1,0 +1,117 @@
+// .formForgotPass{
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     background-color: rgba(0, 0, 0, 0.25);
+//     padding: 0 8px;
+//     visibility: hidden;
+//     // transition: all 0.3s linear;
+//     .formForgotPass_content{
+//         position: relative;
+//         width: 500px;
+//         height: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+        
+//         // transition: all ease-in .5s;
+//         // transform: scale(0, 0) rotate(180deg);
+//         z-index: 99;
+//         .form_main{
+//             position: absolute;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             .formForgotPass{
+//                 margin: auto;
+//                 width: 500px;
+//                 background-color: $text-color;
+//                 height: 70vh;
+                
+//                 .form_title{
+//                     display: flex;
+//                     flex-direction: column;
+//                     text-align: center;
+//                     i{
+//                         font-size: 3rem;
+//                         padding-bottom: 12px;
+//                     }
+//                 }
+//                 a{
+//                     text-decoration: none;
+//                     .btn-cancel{
+//                         margin-top: 0;
+//                         background-color: #ccc;
+//                         color: $title-color;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.modal{
+    .modal-dialog{
+        .modal-content{
+            .modal-header{
+                display: flex;                        
+                flex-direction: column;
+                text-align:center;                     
+                .form_title {
+                    display: flex;
+                    flex-direction: column;
+                    i{
+                        font-size:3rem;                    
+                        padding-bottom: 12px;
+                    }
+                }
+            }
+            .modal-body{
+                .form-control {
+                        padding: 0;
+                        display: flex;
+                        flex-direction: column;
+                        @include font($font, 1.6rem, 300, 1.6rem);
+                        background-color: transparent;
+                        margin: 20px 0;
+                        border: none;
+                
+                        .form_input {
+                            width: 368px;
+                            height: 54px;
+                            padding: 0 20px;
+                            border: 1px solid $title-color;
+                            overflow: hidden;
+                            outline: none;
+                
+                            &::placeholder {
+                                color: $title-color;
+                                @include font($font, 1.6rem, 300, 1.6rem);
+                            }
+                        }
+                
+                        .form-message {
+                            margin-top: 5px;
+                            color: red;
+                
+                        }
+                }
+            }
+            .modal-footer{
+                display: flex; 
+                justify-content: center;
+                align-items: center;
+                a {
+                    text-decoration: none;
+                    .btn-cancel{
+                        margin-top: 0;
+                        background-color: #ccc;
+                        color: $title-color;
+                    }
+                }
+            }
+        }
+    }
+}

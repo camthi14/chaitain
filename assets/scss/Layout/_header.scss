@@ -1,0 +1,275 @@
+header{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    .header_top{
+        display: flex;
+        align-items: center;
+        background-color: $primary-color;
+        height: 30px;
+    
+            .block_icons {
+                display: flex;
+                flex: 1;
+                align-items: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+    
+                .block_icon {
+                    padding: 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    color: $title-color;
+    
+                    .icon {
+                        font-size: 1.6rem;
+    
+                    }
+    
+                    .noti {
+                        @include font($font, 1.4rem, none, 1.4);
+                        margin: 0 20px 0 8px;
+                    }
+                }
+            }
+    }
+    .header_nav{
+        height: 100%;
+        align-items: center;
+        padding: 10px 30px;
+        @include font($font, 1.6rem, 600, 1.4rem);
+        .logo{
+            img{
+                display: block;
+            }
+        }
+        .nav_search{
+            display: flex;
+            justify-content: center;
+            height: 50px;
+            padding: 0;
+            // width: 50%;
+            
+            input{
+                border: 1px solid $desc-color;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                min-width: 85%;
+                padding: 0 30px;
+                border-right: none;
+                outline: none;
+                &::placeholder {
+                        @include font($font, 1.6rem, 300, 1.6rem);
+                        font-style: italic;
+                        color: $title-color;
+                
+                
+                    }
+            }
+            button{
+                min-width: 15%;
+                background-color: $primary-color;
+                border: none;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                margin: 0;
+                i{
+                    color: $text-color;
+                }
+                &:hover {
+                        background-color: $title-color;
+                    }
+            }
+        }
+        .nav_icon{
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            line-height: 2rem;
+            position: relative;
+            button{
+                border: none;
+                background-color: transparent;
+            }
+            .nav_user{
+                padding: 0 24px;
+                
+                .user_list {
+                    visibility: hidden;
+                    position: absolute;
+                    top: 44px;
+                    left: 0px;
+                    min-width: 160px;
+                    background-color: $text-color;
+                    border-bottom: 5px solid $primary-color;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                    border-radius: 3px;
+                    z-index: 2;
+                    padding-left: 0;
+                    margin-bottom: 0;
+                    
+                    .user_item {
+                        list-style: none;
+                        cursor: pointer;
+                        .user_link {
+                            display: block;
+                            @include font($font, 1.6rem, 400, none);
+                            text-decoration: none;
+                            color: $title-color;
+                            padding: 0 16px;
+                            line-height: 45px;
+                            &:hover{
+                                background-color: rgba(136, 180, 78, 0.05);
+                                @include hover(none, $primary-color);
+                            }
+                        }
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        right: 29px;
+                        top: -10px;
+                        border-left: 10px solid transparent;
+                        border-right: 10px solid transparent;
+                        border-bottom: 10px solid $text-color;
+                    }
+                }
+
+            }
+            span{
+                font-size: 1.6rem;
+                cursor: pointer;
+            }
+            &:hover .user_list{
+                visibility: visible;
+            }
+            
+        }
+    }
+    .header_nav_mobile{
+        display: none;
+     }
+}
+@include respond(phone){
+    header{
+        height: 25vh;
+        .header_nav{
+            display: none;
+        }
+        .header_nav_mobile{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            @include font($font, 1.4rem, 600, none);
+            .logo{
+                img{
+                    width: 50vw;
+                    object-fit: cover;
+                    display: block;
+                }
+            }
+            .navbar{
+                display: flex;
+
+                .nav_search{
+                    display: flex;
+                    height: 50px;
+                    padding: 0;
+                    input{
+                        border: 1px solid $desc-color;
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
+                        min-width: 50%;
+                        padding: 0 12px;
+                        border-right: none;
+                        outline: none;
+                        &::placeholder {
+                                @include font($font, 1.4rem, 300, none);
+                                font-style: italic;
+                                color: $title-color;
+                            }
+                    }
+                    button{
+                        min-width: 20%;
+                        background-color: $primary-color;
+                        border: none;
+                        border-top-right-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        margin: 0;
+                        i{
+                            color: $text-color;
+                        }
+                    }
+                }
+                .nav_icon{
+                    display: flex;
+                    align-items: center;
+                    font-size: 2rem;
+                    line-height: 2rem;
+                    position: relative;
+                    button{
+                        border: none;
+                        background-color: transparent;
+                    }
+                    .nav_user{
+                        padding: 0 24px;
+                        
+                        .user_list {
+                            visibility: hidden;
+                            position: absolute;
+                            top: 31px;
+                            right: -6px;
+                            min-width: 120px;
+                            background-color: $text-color;
+                            border-bottom: 5px solid $primary-color;
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                            border-radius: 3px;
+                            z-index: 2;
+                            padding-left: 0;
+                            margin-bottom: 0;
+                            
+                            .user_item {
+                                list-style: none;
+                                cursor: pointer;
+                                .user_link {
+                                    display: block;
+                                    @include font($font, 1.6rem, 400, none);
+                                    text-decoration: none;
+                                    color: $title-color;
+                                    padding: 0 16px;
+                                    line-height: 45px;
+                                    &:hover{
+                                        background-color: rgba(136, 180, 78, 0.05);
+                                        @include hover(none, $primary-color);
+                                    }
+                                }
+                            }
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                right: 29px;
+                                top: -10px;
+                                border-left: 10px solid transparent;
+                                border-right: 10px solid transparent;
+                                border-bottom: 10px solid $text-color;
+                            }
+                        }
+
+                    }
+                    span{
+                        font-size: 1.6rem;
+                        cursor: pointer;
+                    }
+                    &:hover .user_list{
+                        visibility: visible;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.bg_top {
+    height: 20vh;
+
+    .bg_top-content {
+        background-color: rgb(245, 248, 242);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .bg_top-title {
+            @include font($font-title, 3rem, 700, 1.4);
+            color: $title-color;
+        }
+
+        .bg_top-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            .bg_top-link {
+                text-decoration: none;
+                @include font($font, 2rem, 500, 1.4);
+                color: $primary-color;
+            }
+
+            .bg_top-chevron {
+                color: $primary-color;
+                font-size: 1.4rem;
+                transform: rotate(-90deg);
+                margin-left: 30px;
+                margin-top: 0;
+            }
+
+            .bg_top-sub {
+                @include font($font, 2rem, 500, 1.4);
+                color: $title-color;
+                padding-left: 30px;
+                margin: 0;
+            }
+        }
+
+    }
+
+}

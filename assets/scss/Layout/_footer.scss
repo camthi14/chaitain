@@ -1,0 +1,143 @@
+footer{
+    .parlo_footer_top {
+        padding: 30px 0;
+            .container {
+                .footer-top-2 {
+                    .footer_content {
+                        padding: 0 15px;
+                        .address{
+                            @include font($font-title, 1.6rem, 400, 1.4);
+                            color: $title-color;
+                            padding-top: 40px;
+                            i{
+                                color: $primary-color;
+                                padding-right: 12px;
+                            }
+                            a{
+                                color: $title-color;
+                                text-decoration: none;
+                            }
+                        }
+                        .footer_list {
+                            display: flex;
+                            padding: 12px 0 0 0;
+
+                            .footer_item {
+                                list-style: none;
+                                margin-left: 12px;
+
+                                .footer_link {
+                                    text-decoration: none;
+                                    @include font($font, 1.4rem, 400, none);
+                                    @include hover($primary-color, $text-color);
+                                    padding: 10px;
+                                    border-radius: 50%;
+
+                                    &:hover {
+                                        @include hover($title-color, $text-color);
+
+                                    }
+                                }
+                                &:first-child{
+                                    margin-left: 0;
+                                }
+                            }
+
+                        }
+                        .footer_title {
+                            @include font($font-title, 2.4rem, 700, 1.4);
+                            color: $primary-color;
+                            margin-bottom: 0;
+                        }
+                        .footer_main{
+        
+                            .explore_list {
+                                padding-left: 0;
+                                margin-bottom: 0;
+                                padding-top: 25px;
+        
+                                .explore_item {
+                                    list-style: none;
+        
+                                    .explore_link {
+                                        display: inline-block;
+                                        text-decoration: none;
+                                        @include font($font, 1.6rem, 400, 1.6rem);
+                                        color: $title-color;
+                                        padding: 0 0 20px 16px;
+                                    }
+                                    .ex_chevron {
+                                        position: absolute;
+                                        width: 8px;
+                                        height: 8px;
+                                        border-right: 2px solid $primary-color;
+                                        border-top: 2px solid $primary-color;
+                                        transform: rotate(45deg);
+                                        -moz-transform: rotate(45deg);
+                                        -webkit-transform: rotate(45deg);
+                                        margin-left: 0;
+                                        margin-top: 11px;
+                                    }
+                
+                                    &:hover {
+                                        @include hover(none, $primary-color);
+                                        opacity: 0.8;
+                                        margin-left: 10px;
+                                        transition: 0.6s;
+                                    }
+                                }
+                            }
+                        }
+                        .footer_address{
+                            padding-top: 40px;
+                        }
+                    }
+                }
+                
+            }
+    }
+    .footer_bottom {
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // position: relative;
+        background-color: $title-color;
+        color: $text-color;
+    
+        span {
+            @include font($font, 1.6rem, 400, 1.6rem);
+        }
+    
+        .top_page {
+                background-color: $primary-color;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+                display:none; 
+                bottom: 10px; 
+                right: 10px; 
+                cursor: pointer;  
+                position: fixed; 
+                z-index: 1000;
+    
+                &:hover {
+                    @include hover($text-color, $title-color);
+                }
+    
+                .icon-top {
+                    i {
+                        display: flex;
+                        justify-content: center;
+                        padding: 16px;
+                        font-size: 1.6rem;
+                        color: $title-color;
+                        transform: rotate(180deg);
+                    }
+                }
+    
+    
+        }
+    }
+}

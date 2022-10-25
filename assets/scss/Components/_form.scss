@@ -1,0 +1,75 @@
+ .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     .form_title {
+         @include font($font, 3rem, 500, 1.4);
+         color: $title-color;
+        padding-top: 10px;
+     }
+     .form_sub {
+         @include font($font, 1.6rem, 300, 1.6rem);
+         font-style: italic;
+         color: $title-color;
+         margin-bottom: 20px;
+     }
+
+     .form-group {
+         padding: 0;
+         display: flex;
+         flex-direction: column;
+         @include font($font, 1.6rem, 300, 1.6rem);
+         background-color: transparent;
+        //  margin-bottom: 20px;
+         border: none;
+        .form-control{
+            margin-bottom: 0;
+        }
+         .form_input {
+             width: 368px;
+             height: 54px;
+             padding: 0 20px;
+             border: 1px solid $title-color;
+             overflow: hidden;
+             outline: none;
+
+             &::placeholder {
+                 color: $title-color;
+                 @include font($font, 1.6rem, 300, 1.6rem);
+             }
+         }
+
+         .form-message {
+             margin: 12px 0 8px;
+             color: red;
+
+         }
+     }
+     .forgot-pass{
+        text-decoration: none;
+        color: $title-color;
+        text-align: center;
+        @include font($font, 1.6rem, 300, 1.4);
+        font-style: italic;
+        cursor: pointer;
+        margin-bottom: 20px;
+        
+        &:hover {
+            opacity: 0.5;
+        }
+     } 
+
+ }
+@include respond(phone) {
+    .form {
+        .form-group {
+            .form_input {
+                width: 100%;
+                height: 45px;
+                padding: 0 10px;
+            }
+        }
+
+    }
+}
